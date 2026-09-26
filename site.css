@@ -1,0 +1,99 @@
+/* Lügat — site. Uygulamanın "Çini ve lügat" paleti: kobalt, krem, koyu gece mavisi. JavaScript yok. */
+:root {
+  --bg: #f7f2e8;
+  --surface: #fffdf8;
+  --text: #1d2433;
+  --muted: #5d6675;
+  --accent: #1f4fa3;
+  --accent-soft: #dfe7f6;
+  --border: #e3dccd;
+  --max: 44rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1524;
+    --surface: #161f33;
+    --text: #eef1f7;
+    --muted: #a3acbd;
+    --accent: #8fb0ee;
+    --accent-soft: #1f2e4d;
+    --border: #2a3650;
+  }
+}
+* { box-sizing: border-box; }
+html { color-scheme: light dark; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Alegreya Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+h1, h2, h3 {
+  font-family: 'Alegreya', Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+  margin: 2rem 0 0.75rem;
+}
+h1 { font-size: 2.4rem; margin-top: 0; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+p, ul, ol { margin: 0 0 1rem; }
+li { margin-bottom: 0.35rem; }
+a { color: var(--accent); }
+strong { font-weight: 700; }
+.hero {
+  background: var(--accent);
+  color: #fff;
+  padding: 3rem 1rem 2.5rem;
+}
+.hero .inner { max-width: var(--max); margin: 0 auto; }
+.hero h1 { color: #fff; }
+.hero p { color: rgba(255, 255, 255, 0.85); font-size: 1.2rem; max-width: 34rem; }
+.hero .badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.hero .badge[aria-disabled='true'] { opacity: 0.7; pointer-events: none; }
+main { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+.meta { color: var(--muted); font-size: 0.95rem; }
+.lang { float: right; font-size: 0.95rem; }
+.lang a { margin-left: 0.75rem; }
+nav.top {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0.75rem 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.95rem;
+}
+footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; font-size: 1rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 500; }
+@media (max-width: 40rem) {
+  body { font-size: 1.05rem; }
+  h1 { font-size: 2rem; }
+  .lang { float: none; display: block; margin-bottom: 0.5rem; }
+}
